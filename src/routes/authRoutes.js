@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/authController');
 
-// Route này dùng để đồng bộ dữ liệu sau khi FE login Google thành công
-router.post('/google-sync', authController.googleSync);
+// Chỉ cần duy nhất 1 route này cho Google
+router.post('/google-sync', authController.googleLoginSync);
 
 module.exports = router;
